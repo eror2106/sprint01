@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+Ceci se passe de commentaire.
+-->
+<html>
+<head>
+ <meta  charset="UTF-8">
+ <link rel="stylesheet" type="text/css" href="css/groupgenerateurCSSmax1149.css" media="only screen and (max-width: 1149px)" />
+ <link rel="stylesheet" type="text/css" href="css/groupgenerateurCSSmin1150.css" media="only screen and (min-width: 1150px)"/>
+ 
+ <title>Group generateur</title>
+</head>
+<body>
+    <a name="haut"></a>
+    <div class = "main">
+        <div class= "image1">
+            <img class = "logo" src="img\team1.png" alt = "personnes_tournoyant">
+        </div>
+        <div class= "mainTitle_container">
+            <h1 class = "mainTitle">Group Creator</h1>
+            <h2 class = "secTitle">Create yours groups just like that</h2>
+        </div>
+    </div>
+    <form class = "formulaire" action="entree" >
+        <div class = "horizon">
+            <div class = "entrees">
+                <div class = "nameInput" >
+                    <form class = "formPersonne" name="formPersonne">
+                        <div class = "fname_container">
+                            <label for = "fname">First Name</label><br>
+                            <input type = "text" id="fname" class="inputsName" name = "fname" maxlength="10"><br>
+                        </div>
+                        <div class = "name_container">
+                            <label for = "name" class = "labelName">Name</label><br>
+                            <input type = "text" id="name" class="inputsName" name = "name" maxlength="15">   
+                        </div>
+                        <div class= "ajout">
+                            <img src = "img\plus.png" onclick = main() type="submit" class="buttonAjou" alt = "ajouter">
+                        </div>
+                    </form>
+                </div>
+                <div class = "choixSexe">
+                    <div class = "genreFemme">
+                        <label">
+                            <img src = "img\femme.png" alt = "femme" class = "pngFemme">
+                            <input type = "radio" id="inputsSexeFemme" class = "inputsSexe" name="sexe">
+                        </label>
+                    </div>
+                    <div class="genreHomme">
+                        <label>
+                            <img src = "img\homme.png" alt = "homme" class = "pngHomme">
+                            <input type = "radio" id="inputsSexeHomme" class = "inputsSexe" name="sexe">
+                        </label>
+                    </div>
+                </div>
+                <div class = "choixGroup">
+                    <div class ="group">
+                        <div class = "radioNbGroup">
+                            <input id = "radioBTNNbGroup" onclick = hideShowNbGroup() type = "button"  value="Nb of Groups" name="groupchoix">
+                        </div>
+                        <div id = "inputNbGroupe">
+                            <select id = "nbGroupe">
+                                <option class = "nbGroupe" value = "2"selected>2</option>
+                                <option class = "nbGroupe" value = "3">3</option>
+                                <option class = "nbGroupe" value = "4">4</option>
+                                <option class = "nbGroupe" value = "5">5</option>
+                                <option class = "nbGroupe" value = "6">6</option>
+                                <option class = "nbGroupe" value = "7">7</option>
+                                <option class = "nbGroupe" value = "8">8</option>
+                                <option class = "nbGroupe" value = "9">9</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class ="group" id="taille">
+                        <div class = "radioTGroup">
+                            <input id = "radioBTNTGroup" type = "button" onclick = hideShowTGroup() value="Group Size" name="groupchoix">
+                        </div>
+                        <div id = "inputTGroupe">
+                            <select id = "tGroupe">
+                                <option class = "tGroupe" value = "2"selected>2</option>
+                                <option class = "tGroupe" value = "3">3</option>
+                                <option class = "tGroupe" value = "4">4</option>
+                                <option class = "tGroupe" value = "5">5</option>
+                                <option class = "tGroupe" value = "6">6</option>
+                                <option class = "tGroupe" value = "7">7</option>
+                                <option class = "tGroupe" value = "8">8</option>
+                                <option class = "tGroupe" value = "9">9</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "buttom_container">
+                <div class= "generate">
+                    <button type = "button" id = "btnCreer" class = "buttonCre" onclick="gen()">Show teams</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <div class="horizonAffichage">
+        <div class="zone_affichageParticipant" id="fondation">
+            <div class = "t2name">
+                <h2 class = "titleName">Participants</h2>
+            </div>
+            <div class = "zoneName" id = "participants">
+                <!--zone des participant-->
+            </div>
+        </div>
+        <div class = "trashCan">
+            <div class = "divTrashExtSupL">
+                <img class = "trashExtSupL" src = "img\trashExtSupL.png">
+                <div class = "divTrashExtInfR">
+                    <img class = "trashExtInfR1" src = "img\trasExtInfR.png">
+                    <img class = "trashExtInfR2" src = "img\trasExtInfR.png">
+                    <div class = "divTrashCentre">
+                        <button type = "button" id="sup" onclick = "supprimer()">
+                            <img src = "img\trashCanCentre.png" class = "btnSupprim" onmouseout = "rotationBTNSupprimOFF();" onmouseover = "rotationBTNSupprimON();" alt = "TrashCam" >
+                        </button>
+                    </div
+                ></div>
+            </div>
+        </div>
+        <div class="zone_affichageGroupes" id="test"  > 
+            <div class = "t2Groups">
+                <h2 class = "titleGroupe">Groups</h2>
+            </div>
+            <div class = "zoneGroups" id = "result">
+                <!--zone resultat-->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p class = "footertext">&copy; Created by Moina, Stéphane, Steve </br>
+										20 december 2021 at 14 january 2022 as part of the training by</p> 
+		<a href = "https://simplon.co/" class "simplon" target= "_blank");>SIMPLON.CO</a>
+        <a href="#haut" class = "AimgRetourPage">
+            <img class = "imgRetourPage" src = "img/RetourPage.png"></a>
+    </footer>
+        
+    <script src="anime-master\lib\anime.min.js"></script>  
+    <script type="text/javascript" src="groupgenerateurJS.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

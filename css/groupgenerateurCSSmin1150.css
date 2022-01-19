@@ -1,0 +1,605 @@
+/*@media only screen and (max-width: 1151px)*/
+/*######---CSS DE BASE---###############################################*/
+body {
+  background-image: url("http://www.snut.fr/wp-content/uploads/2015/12/image-de-nature-9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-left: 0.4rem;
+  margin-bottom: 0.4rem;
+  margin-right: 0.4rem;
+  font-family: system-ui;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+  margin-top: -1.75rem;
+}
+
+/* #### creation et control d'animation du logo ###### */
+.image1 {
+  flex: 1;
+}
+.logo {
+  height: 6.5rem;
+  width: 6.5rem;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+  animation-name: rotation;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.logo:hover {
+  animation-play-state: paused;
+}
+/*#########################################################*/
+
+.mainTitle_container {
+  flex: 5;
+  flex-direction: column;
+}
+.mainTitle {
+  align-items: flex-end;
+  font-size: 3rem;
+  margin-left: 1rem;
+  padding-bottom: 0rem;
+}
+.secTitle {
+  align-items: flex-end;
+  text-align: left;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-top: -1.5rem;
+}
+
+/*#########-----gerance des champs d'entrees-----##################################### */
+.nameInput label {
+  text-shadow: 0.01rem 0.01rem #ffffff;
+  color: #ffffff;
+  font-size: larger;
+}
+.choixGroup label {
+  text-shadow: 0.01rem 0.01rem #000000;
+  color: #000000;
+  font-size: large;
+}
+
+.formulaire {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+.entrees {
+  display: flex;
+  flex-direction: row;
+}
+
+.nameInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 1.5rem;
+}
+.ajout {
+  display: flex;
+  margin-top: 2rem;
+  margin-left: 3rem;
+  padding: 1rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: rgba(178, 201, 214, 0.6);
+  justify-content: center;
+  border-radius: 1rem;
+}
+.buttonAjou {
+  flex: 1;
+  width: 3.1rem;
+  height: 3.1rem;
+  transition: 0.2s;
+  text-align: center;
+  align-self: center;
+}
+.buttonAjou:hover {
+  width: 3.2rem;
+  height: 3.2rem;
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
+.buttonAjou:active {
+  width: 3.1rem;
+  height: 3.1rem;
+}
+.buttonAjou:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(146, 148, 248, 0.4), transparent);
+  transition: all 650ms;
+}
+.buttonAjou:hover:before {
+  left: 100%;
+}
+
+.fname_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.name_container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.inputsName {
+  width: 17rem;
+  height: 1.8rem;
+  box-shadow: 0.1rem 0.1rem rgb(0, 162, 255);
+  border-radius: 0.4rem;
+  border: none;
+  transition: 0.2s;
+}
+.inputsName:hover {
+  box-shadow: 0.2rem 0.2rem rgb(0, 122, 192);
+}
+.labelName {
+  padding-top: 0.5rem;
+}
+
+.choixSexe {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 3rem;
+}
+.genreFemme {
+  background: rgba(255, 255, 255, 0.7);
+}
+.genreHomme {
+  background: rgba(255, 255, 255, 0.4);
+}
+.choixGroup {
+  flex: 2;
+  display: flex;
+  max-height: 4rem;
+  padding-top: 2rem;
+}
+.group {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  flex-direction: column;
+}
+
+/*#####----Groupes-----##########*/
+#inputNbGroupe {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  align-items: flex-start;
+}
+#inputTGroupe {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  align-items: flex-start;
+}
+#radioBTNNbGroup {
+  width: 6rem;
+  height: 2rem;
+  font-weight: bolder;
+  border-radius: 0.4rem;
+  box-shadow: 0.1rem 0.1rem rgb(0, 162, 255);
+  transition: 0.4s;
+}
+#radioBTNNbGroup:hover {
+  box-shadow: 0.2rem 0.2rem rgb(0, 122, 192);
+}
+
+#nbGroupe {
+  width: 6rem;
+  height: 1.8rem;
+  font-weight: bolder;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem rgb(0, 162, 255);
+  transition: 0.2s;
+}
+#nbGroupe:hover {
+  box-shadow: 0.2rem 0.2rem rgb(0, 122, 192);
+}
+#tGroupe {
+  width: 6rem;
+  height: 1.8rem;
+  font-weight: bolder;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem rgb(0, 162, 255);
+  transition: 0.2s;
+}
+#tGroupe:hover {
+  box-shadow: 0.2rem 0.2rem rgb(0, 122, 192);
+}
+
+#radioBTNTGroup {
+  width: 6rem;
+  height: 2rem;
+  font-weight: bolder;
+  border-radius: 0.4rem;
+  box-shadow: 0.1rem 0.1rem rgb(0, 162, 255);
+  transition: 0.4s;
+}
+#radioBTNTGroup:hover {
+  box-shadow: 0.2rem 0.2rem rgb(0, 122, 192);
+}
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+/*######-----Check sexe--------#####################################################*/
+
+.inputsSexe {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-left: 1.5rem;
+  outline: none;
+  position: relative;
+}
+.inputsSexe:hover {
+  background: #9faab7;
+}
+.inputsSexe:checked {
+  background: #40e0d0;
+}
+.inputsSexe:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: "✔";
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+.inputsSexe:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: "";
+  display: block;
+  position: relative;
+}
+.inputsSexe {
+  border-radius: 50%;
+}
+.inputsSexe::after {
+  border-radius: 50%;
+}
+
+/*##################################################################*/
+
+.pngHomme {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.pngFemme {
+  width: 2rem;
+  height: 3rem;
+}
+
+/*########-----BTN Ajouter et Creer-----##############################################*/
+
+.buttom_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+}
+.generate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+}
+
+.buttonCre {
+  font-size: 2rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  height: 3rem;
+  width: 20rem;
+  color: rgb(87, 69, 245);
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: rgb(178, 201, 214);
+  transition: 0.2s;
+}
+.buttonCre:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+  color: rgb(219, 47, 47);
+}
+.buttonCre:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(146, 148, 248, 0.4), transparent);
+  transition: all 650ms;
+}
+.buttonCre:hover:before {
+  left: 100%;
+}
+.buttonCre:active {
+  font-size: 1.9rem;
+}
+
+/*#######---Boubelle---###############################################################*/
+
+#sup {
+  background: none;
+  border: none;
+}
+.trashCan {
+  flex: 1;
+  align-self: flex-end;
+  position: relative;
+}
+.trashExtSupL {
+  border: transparent 3px solid;
+  position: relative;
+  top: 11rem;
+  height: 5rem;
+  width: 5rem;
+}
+.trashExtInfR1 {
+  border: transparent 3px solid;
+  position: relative;
+  top: 5.45rem;
+  height: 5rem;
+  width: 5rem;
+}
+.trashExtInfR2 {
+  border: transparent 3px solid;
+  position: relative;
+  right: 5.65rem;
+  top: 5.45rem;
+  height: 5rem;
+  width: 5rem;
+}
+.btnSupprim {
+  border: transparent 3px solid;
+  position: relative;
+  right: 0.9rem;
+  bottom: 0.8rem;
+  height: 6rem;
+  width: 6rem;
+}
+
+/*#########----------zones d'affchiges des participants et des groupes----------#######*/
+
+.horizonAffichage {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+}
+.zoneName {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+#participant {
+  flex: 1;
+  padding: 0.2rem;
+  margin: 0.15rem;
+  max-height: 3rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 750;
+  box-shadow: 1.5px 1.5px black;
+  background: white;
+  transition: 0.2s;
+}
+#participant:hover {
+  box-shadow: 2.2px 4px 3px black;
+}
+.nomPrenomFemme {
+  color: rgb(247, 22, 198);
+}
+.nomPrenomHomme {
+  color: rgb(87, 69, 245);
+}
+#participantSelectionne {
+  flex: 1;
+  padding: 0.2rem;
+  margin: 0.15rem;
+  max-height: 3rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 750;
+  box-shadow: 1.5px 1.5px black;
+  transition: 0.2s;
+  background: orange;
+}
+#articipantSelectionne:hover {
+  box-shadow: 2.2px 4px 3px black;
+  font-weight: 790;
+}
+.participantSelectionne {
+  flex: 1;
+  padding: 0.2rem;
+  margin: 0.15rem;
+  max-height: 3rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 750;
+  box-shadow: 1.5px 1.5px black;
+  transition: 0.2s;
+  background: orange;
+}
+.articipantSelectionne:hover {
+  box-shadow: 2.2px 4px 3px black;
+  font-weight: 790;
+}
+.titleName {
+  padding-left: 1rem;
+  color: #fff;
+  font-weight: bolder;
+}
+.titleGroupe {
+  color: #fff;
+  font-weight: bolder;
+  text-shadow: 0.2rem 0.2rem black;
+}
+
+.zone_affichageParticipant {
+  flex: 2;
+  flex-direction: column;
+  display: flex;
+}
+.zoneName {
+  border: black 3px solid;
+  flex: 4;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+}
+
+.zone_affichageGroupes {
+  flex: 3;
+  flex-direction: column;
+  display: flex;
+}
+.zoneGroups {
+  border: black 3px solid;
+  flex: 4;
+  display: flex;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+  flex-wrap: wrap;
+}
+.affichageGroupe {
+  width: 8rem;
+  white-space: pre-line;
+  height: min-content;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px black;
+  padding: 4px;
+  margin: 10px;
+  font-weight: bolder;
+  background: #ffffff;
+}
+.zoneGroups {
+  border: black 3px solid;
+  flex: 4;
+  display: flex;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+  flex-wrap: wrap;
+}
+.resultat {
+  width: 8rem;
+  white-space: pre-line;
+  height: min-content;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 3px 3px black;
+  padding: 4px;
+  margin: 10px;
+  font-weight: bolder;
+  background: #ffffff;
+}
+
+/*#######---footer---#########################################################*/
+footer {
+  display: flex;
+  min-height: 4rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background: linear-gradient(to right, blue, #b3b3ff);
+}
+.footertext {
+  flex: 3;
+  align-content: center;
+}
+.imgRetourPage {
+  flex: 1;
+  height: 1.8rem;
+  width: 1.8rem;
+  transition: 0.2s;
+}
+.AimgRetourPage {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+.imgRetourPage:hover {
+  height: 1.9rem;
+  width: 1.9rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0.2rem;
+}
+.imgRetourPage:active {
+  height: 1.8rem;
+  width: 1.8rem;
+}

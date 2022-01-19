@@ -1,0 +1,62 @@
+Pseudo code Site web "CREATION DE GROUPES"
+
+
+donner une limite de charactères à entrer ainsi qu'une interdiction des charactères spéciaux (exp.: ">","<","(",...)
+RECUPERATION ET VERIFICATION DU NOM
+controle et vérification
+entrer un nom
+click sur boutton entrer
+if (pas de char)
+	popup (entrer un nom)
+il (char interdit) 
+	popup (pas de char spéciaux)
+if (trop de char)
+	popup (limiter le nombre de char)
+	else (accepter et ajouter le nom à la liste)
+
+SUPPRIMER UN NOM 
+Selection / Deselection des noms
+Appuyer sur bouton recycler
+if(Valider bouton)
+	popup (demander confirmation avec "oui" "non")
+		if "Oui"
+			supprimer les noms
+		if "non"
+			
+
+	
+CHOISIR NB GROUPE OU NB TAILLE DE GROUPE
+cklick sur les case pour débloquer la façon de la construction des groupes
+if (case "nb Groupe" active) 
+
+
+	débloquer ménu déroulant nb groupe
+	vérifier nb de participant dans la liste 
+	donner dans le ménu déroulant le nb possible pour constituer des groupes égales.
+	choisir le nb de groupes
+	clicker sur le boutton générer (SHOW TEAM)
+	if (nb participant % nb groupe = 0)
+	afficher les groupes
+	else (pas d'égalité de groupes possible)
+		confirm ("une groupe sera pas complèt")
+				"poursivre?"
+				if ("oui")
+				afficher les groupes égales avec un groupe avec les personnes restant
+					else 
+					interrompre le processus
+
+if (case "nb de personnes par groupe" active)
+	débloquer ménu déroulant nb de personnes par groupe
+	choix du nb de personnes par groupe
+	clicker sur le boutton générer
+	if (nb de personnes % par choix de la taille du groupe = 0)
+		génerer les groupes
+		else
+		(pas dégalité de groupes possible)
+		confirm ("une groupe sera pas complèt")
+				"poursivre?"
+				if ("oui")
+				afficher les groupes égales avec un groupe avec les personnes restant
+					else 
+					interrompre le processus
+
